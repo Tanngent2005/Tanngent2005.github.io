@@ -43,7 +43,6 @@ extra_css:
 nav:
   - Writing:
       - Overview: blog/index.md
-      - Start here: blog/getting-started.md
   - Notes:
       - Overview: notes/index.md
   - About: about.md

@@ -37,7 +37,7 @@ py -m venv .venv
 
 文章里的图片放到 `docs/assets/images/`，引用格式为 `![图片说明](../assets/images/figure.png)`。数学公式可以写 `$E=mc^2$` 或 `$$...$$`。PDF 可放到 `docs/notes/` 并从 `docs/notes/index.md` 链接，例如 `[课程总结](summary.pdf)`。
 
-> 如果暂时没有文章，可以保留示例 `docs/blog/getting-started.md`；写好第一篇后可删除示例，并同步删除 `mkdocs.yml` 和 Blog 列表中的对应链接。
+写好第一篇后，把 `docs/blog/index.md` 里的 “The first article is on its way.” 换成真实文章链接。
 
 ## 发布
 
