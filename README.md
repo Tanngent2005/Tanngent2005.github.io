@@ -103,3 +103,7 @@ git push origin main
 - <https://kkzsocute.github.io/>
 - <https://bearthesilly.github.io/>
 - <https://wangzh12023.github.io/>
+
+### 检查不同屏幕宽度
+
+打开 `/layout-preview.html` 可以在同一个页面选择 390px、768px 和 1120px 预览框，检查实际响应式排版。它用 iframe 显示本站，未放入公开导航，并设置了 `noindex`。手机实机仍可直接打开网站进行检查。
