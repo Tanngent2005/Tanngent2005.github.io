@@ -1,17 +1,27 @@
 site_name: Yiyang Tan
-site_description: Personal site, research notes, and writing by Yiyang Tan.
+site_description: Research, writing, and working notes by Yiyang Tan.
 site_url: https://tanngent2005.github.io/
 site_author: Yiyang Tan
 
 theme:
   name: material
   language: en
+  font: false
   favicon: assets/favicon.svg
   logo: assets/favicon.svg
   palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark theme
     - scheme: slate
-      primary: black
-      accent: cyan
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light theme
   features:
     - navigation.tabs
     - navigation.top
@@ -35,16 +45,21 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+extra:
+  homepage: https://tanngent2005.github.io/
+  generator: false
 extra_javascript:
+  - assets/js/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   - assets/css/writing.css
 
 nav:
+  - Home: https://tanngent2005.github.io/
   - Writing:
-      - Overview: blog/index.md
+      - Journal: blog/index.md
   - Notes:
-      - Overview: notes/index.md
+      - Notebook: notes/index.md
   - About: about.md
 
-copyright: Copyright &copy; 2026 Yiyang Tan
+copyright: Copyright &copy; 2026 Yiyang Tan · 谭逸扬

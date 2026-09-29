@@ -1,58 +1,105 @@
-# Yiyang Tan · Personal website
+# Yiyang Tan · Research & Notes
 
-个人主页 + Markdown Blog/笔记，使用 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 生成，由 GitHub Pages 发布到 <https://tanngent2005.github.io/>。
+网站：<https://tanngent2005.github.io/>
 
-## 最常修改的文件
+一份简洁的学术个人主页，以及用 Markdown 维护的 Writing / Notes。首页使用独立 HTML、CSS 和少量 JavaScript；文章页由 MkDocs Material 构建。提交到 `main` 后，现有 GitHub Actions 会自动发布到 GitHub Pages。
 
-| 你要修改什么 | 文件 |
+## 设计与内容
+
+- 浅色纸面、墨蓝文字、细分隔线；首页和阅读页都有深色模式。
+- 首页：个人介绍 → 近期动态 → 研究工作 → 教育 / 教学 / 获奖 → 博客与笔记入口。
+- 论文配图是原创概念示意图，不是论文原图或实验数据。
+- Writing 和 Notes 目前没有发布文章，页面保留真实的空状态，方便之后添加。
+- 首页不依赖第三方字体、动画服务或远程图片。论文链接和 MathJax 公式加载需要网络。
+
+## 修改位置
+
+| 要修改的内容 | 文件 / 搜索位置 |
 | --- | --- |
-| 首页姓名、研究方向、项目卡片、按钮 | `docs/index.html` |
-| 首页颜色、排版、手机适配 | `docs/assets/css/home.css` |
-| About 页面和公开联系方式 | `docs/about.md` |
-| Blog 列表 | `docs/blog/index.md` |
-| 笔记列表及 PDF 链接 | `docs/notes/index.md` |
-| Blog 和 Notes 的菜单顺序 | `mkdocs.yml` 中的 `nav:` |
-| Blog 阅读页配色 | `docs/assets/css/writing.css` |
+| 姓名、介绍、邮箱 | `docs/index.html`：`INTRO` |
+| 近期动态 | `docs/index.html`：`NEWS` |
+| 论文、作者、链接 | `docs/index.html`：`RESEARCH`，每项是 `article.paper` |
+| 教育、助教、获奖 | `docs/index.html`：`EXPERIENCE` |
+| 主页颜色 | `docs/assets/css/home.css`：开头 `:root` 和深色变量 |
+| 字号、间距、手机布局 | `docs/assets/css/home.css` |
+| 深色模式按钮 | `docs/assets/js/home.js` |
+| 论文概念插图 | `docs/assets/images/*-concept.svg` |
+| 博客列表 | `docs/blog/index.md` |
+| 笔记分类和列表 | `docs/notes/index.md` |
+| 详细个人介绍 | `docs/about.md` |
+| 文章页样式 | `docs/assets/css/writing.css` |
+| 网站导航 | `mkdocs.yml`：`nav` |
 
-**先改首页：**在 `docs/index.html` 中搜索 `Hi, I’m`、`research`、`work`、`contact` 即可定位对应区域。研究项目卡片里目前放了少量起始内容；按你的最终信息修改或删除。当前没有发布你的个人邮箱或 CV。
+修改姓名、研究介绍或联系方式时，同时检查 `docs/index.html` 与 `docs/about.md`，让内容保持一致。
+
+### 增加个人照片（可选）
+
+当前首页右侧是一张研究兴趣便笺，无需照片也可以完整展示。如果以后想使用个人照：
+
+1. 上传照片到 `docs/assets/images/portrait.jpg`。
+2. 把首页的 `<aside class="research-note">...</aside>` 替换为你的照片容器。
+3. 用 `width:100%`、`aspect-ratio:4/5`、`object-fit:cover` 控制照片裁剪；补上准确的 `alt`。
+4. 手机宽度下检查新容器的排列。当前研究便笺在 800px 以下隐藏，可按需要调整。
 
 ## 在 Windows 本地预览
 
-电脑需要已安装 Python 和 Git。在 PowerShell 中，进入本仓库目录运行：
+先安装 Python 和 Git，克隆仓库后在 PowerShell 运行：
 
 ```powershell
+git clone https://github.com/Tanngent2005/Tanngent2005.github.io.git
+cd Tanngent2005.github.io
 py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m mkdocs serve
 ```
 
-打开终端输出的本地地址（通常是 `http://127.0.0.1:8000/`）。修改文件并保存，浏览器会自动刷新。这里直接调用虚拟环境的 Python，无需更改 PowerShell 执行策略。
+打开终端显示的地址，通常为 `http://127.0.0.1:8000/`。直接调用虚拟环境中的 Python，无需改变 PowerShell 执行策略。
 
-## 新增一篇 Blog
+## 写第一篇文章
 
-1. 复制 `templates/post-template.md`，保存为 `docs/blog/你的英文文件名.md`。用 Markdown 写文章。
-2. 在 `mkdocs.yml` 的 `nav:` → `Writing:` 下加一项，例如 `- 我的论文阅读: blog/paper-reading.md`。
-3. 在 `docs/blog/index.md` 的 `## Posts` 下加一行，例如 `- [我的论文阅读](paper-reading.md) · Paper reading`。
-4. 本地运行 `python -m mkdocs serve` 检查链接，再提交到 GitHub。
+1. 复制 `templates/post-template.md` 为 `docs/blog/my-first-post.md`。
+2. 用 Markdown 填写标题、日期、内容。
+3. 删除 `docs/blog/index.md` 里 `<div class="empty-journal">...</div>` 这段空状态，添加实际文章链接，例如：
 
-文章里的图片放到 `docs/assets/images/`，引用格式为 `![图片说明](../assets/images/figure.png)`。数学公式可以写 `$E=mc^2$` 或 `$$...$$`。PDF 可放到 `docs/notes/` 并从 `docs/notes/index.md` 链接，例如 `[课程总结](summary.pdf)`。
+```markdown
+## 2026
 
-写好第一篇后，把 `docs/blog/index.md` 里的 “The first article is on its way.” 换成真实文章链接。
+- **Sep 30** · [我的第一篇文章](my-first-post.md) — 一句话简介。
+```
 
-## 发布
+4. 在 `mkdocs.yml` 的 Writing 导航下加入：
 
-修改源文件后提交并推送到 `main`。GitHub Actions 会自动构建并发布网站。可在仓库的 **Actions** 标签查看构建结果。
+```yaml
+  - Writing:
+      - Journal: blog/index.md
+      - 我的第一篇文章: blog/my-first-post.md
+```
+
+5. 预览并运行 `python -m mkdocs build --strict` 检查后提交。
+
+图片放在 `docs/assets/images/`，文章中使用 `![说明](../assets/images/figure.png)`。行内公式用 `$...$`，独立公式用 `$$...$$`。公式支持由 MathJax 提供；代码块用三个反引号开始和结束。
+
+新增笔记的流程相同：文件放进 `docs/notes/`，然后更新笔记目录和 `mkdocs.yml`。PDF 也可以放在这里并用相对链接引用。
+
+## 发布与恢复
 
 ```powershell
-git add .
-git commit -m "Update website content"
+git add docs mkdocs.yml README.md templates requirements.txt
+git commit -m "Update website"
 git push origin main
 ```
 
-网站使用 **Settings → Pages → Build and deployment → Source: GitHub Actions**。构建脚本在 `.github/workflows/deploy.yml`，一般无需手动运行。
+在仓库 **Actions** 中查看 `Build and deploy website` 是否成功。Pages 发布有时需要等待缓存更新。自动发布配置保存在 `.github/workflows/deploy.yml`，无需为了日常写作而修改。
 
-请在 `main` 修改源码。旧 Hexo 网站保存在 `archive/hexo-2025` 分支，方便查看和恢复。
+- `main` 保存源码；`site/` 是生成目录，已经忽略，不用提交。
+- 修改前先运行 `git pull`，避免覆盖网页端的修改。
+- Git 历史保留了原设计，可以用 `git revert <commit>` 撤销某次改版。
+- 更早的 Hexo 网站保存在 `archive/hexo-2025` 分支。
 
-## 文件组织
+## 设计参考
 
-`docs/index.html` 是自定义首页，`docs/blog/*.md` 和 `docs/notes/*.md` 由 MkDocs 生成；`site/` 是本地构建结果，已经加入 `.gitignore`。
+参考了以下站点的信息组织与学术展示方式；本网站的布局、配色、样式和概念插画重新编写：
+
+- <https://kkzsocute.github.io/>
+- <https://bearthesilly.github.io/>
+- <https://wangzh12023.github.io/>

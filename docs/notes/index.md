@@ -1,10 +1,54 @@
-# Notes
+---
+title: Notes
+description: Course notes, technical references, and a working research notebook.
+hide:
+  - toc
+---
 
-A home for course notes, reading notes, and reusable resources.
+<p class="page-kicker">THE WORKING NOTEBOOK / YIYANG TAN</p>
 
-## Collections
+# Notes to return to
 
-- **Research notes:** paper readings and experiment notes, coming soon.
-- **Course notes:** study materials and summaries, coming soon.
+<p class="page-deck">Short explanations, study materials, and useful references. A place to keep ideas close at hand.</p>
 
-<!-- Example PDF link: [Linear algebra summary](linear-algebra-summary.pdf) -->
+<div class="notebook-topics" markdown>
+
+<div markdown>
+
+<span class="topic-index">01 / RESEARCH</span>
+
+## Papers & experiments
+
+Reading notes on language models, agents, evaluation, and time series. No entries published yet.
+
+</div>
+
+<div markdown>
+
+<span class="topic-index">02 / FOUNDATIONS</span>
+
+## Courses & concepts
+
+Computer science, mathematics, and the ideas behind the tools. No entries published yet.
+
+</div>
+
+<div markdown>
+
+<span class="topic-index">03 / PRACTICE</span>
+
+## Tools & workflows
+
+Programming, experiments, and lessons from debugging. No entries published yet.
+
+</div>
+
+</div>
+
+<!-- Add real notes inside the appropriate category, e.g.
+- [Your note title](your-note.md)
+Then add the page to mkdocs.yml under Notes. -->
+
+For longer reflections, visit the [journal](../blog/index.md).
+
+<p class="back-home"><a href="../">← Back to the homepage</a></p>

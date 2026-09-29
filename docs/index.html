@@ -1,91 +1,123 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yiyang Tan — research, projects, writing, and notes.">
-  <meta name="theme-color" content="#07111c">
-  <title>Yiyang Tan · Research &amp; Writing</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Yiyang Tan (谭逸扬), computer science undergraduate at ShanghaiTech University. Research in language model agents, evaluation, and multimodal time series forecasting.">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yiyang Tan · Research & Notes">
+  <meta property="og:description" content="Language models, learning agents, and the questions in between. Computer Science at ShanghaiTech University.">
+  <meta property="og:url" content="https://tanngent2005.github.io/">
+  <link rel="canonical" href="https://tanngent2005.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/css/home.css">
+  <title>Yiyang Tan · Research & Notes</title>
+  <script>try{if(localStorage.getItem('yiyang-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="assets/js/home.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="./" aria-label="Yiyang Tan, home"><span class="brand-mark">YT<span class="brand-dot">.</span></span><span class="brand-name">Yiyang Tan</span></a>
-      <nav class="nav-links" aria-label="Main navigation">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="./" aria-label="Yiyang Tan, home"><span class="monogram" aria-hidden="true">yt<span>.</span></span><span>Yiyang Tan</span></a>
+      <nav aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
         <a href="blog/">Writing</a>
         <a href="notes/">Notes</a>
-        <a class="nav-about" href="about/">About <span aria-hidden="true">↗</span></a>
       </nav>
-    </header>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+    </div>
+  </header>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-light" aria-hidden="true"></span> ShanghaiTech University <span class="eyebrow-sep">/</span> Computer Science</p>
-          <h1 id="hero-title">Hi, I’m <span>Yiyang.</span></h1>
-          <p class="hero-lede">I explore how intelligent systems reason, learn, and make sense of the world.</p>
-          <p class="hero-description">My interests span language models, agents, evaluation, multimodal learning, and time series. This is a space for my research, projects, and working notes.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="blog/">Read the blog <span aria-hidden="true">↗</span></a>
-            <a class="button button-secondary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+  <main id="main" class="page-shell">
+    <!-- INTRO: edit your name, biography and links here. -->
+    <section class="intro" aria-labelledby="name">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> COMPUTER SCIENCE · SHANGHAITECH UNIVERSITY</p>
+        <h1 id="name">Yiyang Tan <span lang="zh-CN">谭逸扬</span></h1>
+        <p class="intro-line">Language models, learning agents,<br class="desktop-break"> and the questions in between.</p>
+        <p class="bio">I'm a senior undergraduate in Computer Science at <a href="https://www.shanghaitech.edu.cn/eng/">ShanghaiTech University</a>, graduating in 2027. I work on <strong>LLMs and agents</strong>, with interests in evaluation and multimodal time series forecasting.</p>
+        <p class="bio">I'm interested in how agents learn from feedback, how language can inform numerical predictions, and how we can tell when a model's answers deserve our confidence.</p>
+        <div class="social-links">
+          <a href="mailto:tanyy2023@shanghaitech.edu.cn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email</a>
+          <a href="https://github.com/Tanngent2005"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21v-4c-4 1-4-2-6-2m14 6v-4a3 3 0 0 0-1-2c3-.3 6-1.5 6-5a4 4 0 0 0-1-3 4 4 0 0 0 0-4s-1 0-4 2a13 13 0 0 0-8 0C5 3 4 3 4 3a4 4 0 0 0 0 4 4 4 0 0 0-1 3c0 3.5 3 4.7 6 5a3 3 0 0 0-1 2"/></svg>GitHub <span aria-hidden="true">↗</span></a>
+          <a href="about/">More about me <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="research-note" aria-label="Research interests">
+        <div class="note-top"><span>RESEARCH NOTEBOOK</span><span aria-hidden="true">＋</span></div>
+        <div class="notebook-mark" aria-hidden="true">
+          <svg viewBox="0 0 240 128" fill="none"><g stroke="currentColor" opacity=".16"><path d="M0 32h240M0 64h240M0 96h240M40 0v128M80 0v128M120 0v128M160 0v128M200 0v128"/></g><path d="M8 94C35 94 36 49 62 49S91 101 117 80 142 24 163 34 187 86 232 17" stroke="currentColor" stroke-width="2"/><path d="M8 97 62 78 117 90 163 53 232 37" stroke="currentColor" opacity=".4" stroke-dasharray="3 5"/><g fill="currentColor"><circle cx="62" cy="49" r="3"/><circle cx="117" cy="80" r="3"/><circle cx="163" cy="34" r="3"/></g></svg>
+        </div>
+        <p class="note-heading">Reason. Learn. Evaluate.</p>
+        <ul><li><span>01</span> LLMs & agentic learning</li><li><span>02</span> Time series + language</li><li><span>03</span> Evaluation & confidence</li></ul>
+        <div class="note-bottom"><span>SHANGHAI, CHINA</span><span>CLASS OF 2027</span></div>
+      </aside>
+    </section>
+
+    <!-- NEWS: keep this short; add new items at the top. -->
+    <section class="news section-row" aria-labelledby="news-heading">
+      <div class="section-label"><span class="section-number">01 / UPDATES</span><h2 id="news-heading">Recently</h2></div>
+      <div class="news-list">
+        <div class="news-item"><time datetime="2026-09">Sep 2026</time><p><a href="https://mldi.group/ARISE/">ARISE</a> — our work on adapting agentic learning to evolving capability gaps is now online.</p></div>
+        <div class="news-item"><time datetime="2026-08">Aug 2026</time><p><a href="https://foundation-model-research.github.io/KairosAgent/">KairosAgent</a> was accepted to <strong>EMNLP 2026 Main Conference</strong>.</p></div>
+      </div>
+    </section>
+
+    <!-- RESEARCH: duplicate an article.paper to add a publication. -->
+    <section class="research-section section-row" id="research" aria-labelledby="research-heading">
+      <div class="section-label"><span class="section-number">02 / RESEARCH</span><h2 id="research-heading">Selected work</h2><p>Learning, reasoning,<br>and reliable evaluation.</p></div>
+      <div class="section-content">
+        <article class="paper">
+          <a class="paper-visual" href="https://mldi.group/ARISE/" aria-label="ARISE project page"><img src="assets/images/arise-concept.svg" width="480" height="300" alt="Conceptual illustration of a feedback cycle connecting evaluation, skills and agent learning." loading="lazy"></a>
+          <div class="paper-copy">
+            <div class="paper-meta"><span class="venue">PREPRINT</span><span>2026</span></div>
+            <h3><a href="https://mldi.group/ARISE/">ARISE: Adapting to Evolving Capability Gaps in Agentic Reinforcement Learning</a></h3>
+            <p class="authors">Kun Feng*, Yuchen Fang*, <strong>Yiyang Tan</strong>, et al.</p>
+            <p class="paper-description">Adapting evaluation rubrics, reusable skills, and training priorities as an agent's capabilities evolve.</p>
+            <div class="paper-links"><a href="https://mldi.group/ARISE/">Project <span aria-hidden="true">↗</span></a><span class="topic">Agentic reinforcement learning</span></div>
           </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-cross art-cross-a">+</div><div class="art-cross art-cross-b">+</div>
-          <div class="signal-label signal-label-top">RESEARCH / 001</div>
-          <svg class="signal-visual" viewBox="0 0 470 420" role="presentation" focusable="false">
-            <defs>
-              <linearGradient id="signal" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#50b7d4"/><stop offset="0.55" stop-color="#72e7de"/><stop offset="1" stop-color="#9d96ee"/></linearGradient>
-              <radialGradient id="halo"><stop stop-color="#6de2dc" stop-opacity=".28"/><stop offset="1" stop-color="#6de2dc" stop-opacity="0"/></radialGradient>
-            </defs>
-            <circle cx="240" cy="210" r="187" fill="url(#halo)"/>
-            <circle cx="240" cy="210" r="144" class="orbit"/><circle cx="240" cy="210" r="95" class="orbit orbit-inner"/>
-            <path class="signal-line signal-line-muted" d="M15 243C77 224 93 274 145 255s69-121 110-99 54 99 100 83 65-83 110-74"/>
-            <path class="signal-line" d="M15 246C72 246 89 200 131 213s54 89 95 53 48-156 92-104 71 114 147 27"/>
-            <circle cx="226" cy="266" r="5" class="signal-point"/><circle cx="318" cy="162" r="5" class="signal-point"/>
-            <path class="axis-line" d="M240 26v368M16 210h448"/>
-          </svg>
-          <div class="signal-label signal-label-bottom"><span>LANGUAGE</span><span>AGENTS</span><span>TIME SERIES</span></div>
-        </div>
-        <div class="hero-index">01 <span>/</span> 04</div>
-      </section>
+        </article>
+        <article class="paper">
+          <a class="paper-visual" href="https://foundation-model-research.github.io/KairosAgent/" aria-label="KairosAgent project page"><img src="assets/images/kairosagent-concept.svg" width="480" height="300" alt="Conceptual illustration of combining numerical time series and textual context for forecasting." loading="lazy"></a>
+          <div class="paper-copy">
+            <div class="paper-meta"><span class="venue">EMNLP 2026 · MAIN</span><span>2026</span></div>
+            <h3><a href="https://arxiv.org/abs/2605.30002">KairosAgent: Agentic Time Series Forecasting with Fused Semantic Reasoning</a></h3>
+            <p class="authors">Kun Feng*, Ziwei Shan*, Yuchen Fang, <strong>Yiyang Tan</strong>, et al.</p>
+            <p class="paper-description">Bringing semantic reasoning and numerical forecasting together through an agentic approach.</p>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2605.30002">Paper <span aria-hidden="true">↗</span></a><a href="https://foundation-model-research.github.io/KairosAgent/">Project <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <p class="contribution-note">* Equal contribution. My name is highlighted in the author lists.</p>
+        <div class="ongoing"><span class="small-label">CURRENT EXPLORATION</span><h3>When should a forecast be trusted?</h3><p>I'm exploring how the predictability of a time series and the quality of its textual context relate to forecasting error and model confidence.</p><div class="text-tags"><span>Time series + text</span><span>Benchmarking</span><span>Uncertainty</span></div></div>
+      </div>
+    </section>
 
-      <section id="research" class="section research-section" aria-labelledby="research-title">
-        <div class="section-heading"><div><p class="section-kicker">01 / FOCUS</p><h2 id="research-title">Research interests<span class="accent">.</span></h2></div><p>Questions I keep coming back to.</p></div>
-        <div class="focus-grid">
-          <article class="focus-card"><span class="card-number">01</span><span class="card-icon" aria-hidden="true">↗</span><h3>LLMs &amp; Agents</h3><p>How can agents reason through complex tasks and use tools reliably?</p></article>
-          <article class="focus-card"><span class="card-number">02</span><span class="card-icon" aria-hidden="true">⌁</span><h3>Time Series</h3><p>How can numerical patterns and text context improve forecasts together?</p></article>
-          <article class="focus-card"><span class="card-number">03</span><span class="card-icon" aria-hidden="true">◎</span><h3>Evaluation</h3><p>How do we measure what models understand and where they fail?</p></article>
-        </div>
-      </section>
+    <!-- EXPERIENCE: update education, teaching and selected awards here. -->
+    <section class="section-row" id="experience" aria-labelledby="experience-heading">
+      <div class="section-label"><span class="section-number">03 / BACKGROUND</span><h2 id="experience-heading">Along the way</h2><p>Education, teaching,<br>and things I've built.</p></div>
+      <div class="section-content">
+        <div class="experience-item"><div class="experience-kind">EDUCATION</div><div><div class="entry-heading"><h3>ShanghaiTech University</h3><span class="entry-date">2023 — 2027</span></div><p>Undergraduate · Computer Science and Technology<br><span class="muted">Expected graduation: 2027</span></p></div></div>
+        <div class="experience-item"><div class="experience-kind">TEACHING</div><div><div class="entry-heading"><h3>Introduction to Programming</h3><span class="entry-date">CS100</span></div><p>Teaching Assistant · ShanghaiTech University</p><p class="muted">Programming support, assignment discussions, and debugging.</p></div></div>
+        <div class="experience-item"><div class="experience-kind">BUILDING</div><div><h3>From systems to interactive software</h3><p>Projects and coursework in Go backend development, C++ game development, and RISC-V. I've also participated in the <a href="https://geekpie.club/">GeekPie</a> community.</p><div class="text-tags"><span>Python / PyTorch</span><span>C / C++</span><span>Go</span><span>Linux / Git</span></div></div></div>
+        <div class="honors"><h3>Selected honors</h3><div><p>ASC Student Supercomputer Challenge <span>Second Prize</span></p><time datetime="2025">2025</time></div><div><p>China Undergraduate Mathematical Contest in Modeling <span>Shanghai · Third Prize</span></p><time datetime="2025">2025</time></div></div>
+      </div>
+    </section>
 
-      <section id="work" class="section work-section" aria-labelledby="work-title">
-        <div class="section-heading"><div><p class="section-kicker">02 / SELECTED WORK</p><h2 id="work-title">Things I’m working on<span class="accent">.</span></h2></div><p>Questions, experiments, and ideas in progress.</p></div>
-        <!-- EDIT: Replace each title, description, and link with your own publication or project details. -->
-        <div class="work-list">
-          <article class="work-item"><span class="work-year">2026</span><div><p class="work-type">RESEARCH · EMNLP 2026</p><h3>KAIROSAGENT</h3><p>Agentic time series forecasting with fused semantic reasoning.</p></div><span class="work-arrow" aria-hidden="true">↗</span></article>
-          <article class="work-item"><span class="work-year">ONGOING</span><div><p class="work-type">RESEARCH · EVALUATION</p><h3>Time series &amp; text benchmarks</h3><p>Studying how contextual information helps forecasting models.</p></div><span class="work-arrow" aria-hidden="true">↗</span></article>
-          <a class="work-item work-link" href="blog/"><span class="work-year">EXPLORE</span><div><p class="work-type">IDEAS · LEARNING</p><h3>Research notes &amp; writing</h3><p>Notes on papers, experiments, and ideas in progress.</p></div><span class="work-arrow" aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section class="section writing-section" aria-labelledby="writing-title">
-        <div class="section-heading"><div><p class="section-kicker">03 / KNOWLEDGE BASE</p><h2 id="writing-title">A place to think out loud<span class="accent">.</span></h2></div></div>
-        <div class="portal-grid">
-          <a class="portal-card" href="blog/"><span class="portal-tag">/ BLOG</span><h3>Writing</h3><p>Paper readings, research ideas, and things learned along the way.</p><span class="portal-action">Browse articles <span aria-hidden="true">↗</span></span></a>
-          <a class="portal-card" href="notes/"><span class="portal-tag">/ NOTES</span><h3>Notes</h3><p>Course material, useful resources, and study notes in one place.</p><span class="portal-action">Explore notes <span aria-hidden="true">↗</span></span></a>
-        </div>
-      </section>
-
-      <section class="section contact-section" aria-labelledby="contact-title"><p class="section-kicker">04 / CONNECT</p><h2 id="contact-title">Let’s exchange ideas<span class="accent">.</span></h2><p>Find my projects and updates on GitHub.</p><a class="button button-primary" href="https://github.com/Tanngent2005" target="_blank" rel="noopener noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a></section>
-    </main>
-
-    <footer class="site-footer"><span>© 2026 Yiyang Tan</span><span>Built with curiosity, MkDocs &amp; GitHub Pages.</span><a href="#main">Back to top ↑</a></footer>
-  </div>
+    <section class="section-row writing-section" aria-labelledby="writing-heading">
+      <div class="section-label"><span class="section-number">04 / OPEN NOTEBOOK</span><h2 id="writing-heading">Writing & notes</h2><p>A place to work<br>through ideas.</p></div>
+      <div class="notebook-links">
+        <a class="notebook-link" href="blog/"><span class="notebook-index">A / WRITING</span><h3>Thinking in public <span aria-hidden="true">↗</span></h3><p>Longer reflections on papers, research questions, and experiments.</p><span class="notebook-action">Visit the journal <span aria-hidden="true">→</span></span></a>
+        <a class="notebook-link" href="notes/"><span class="notebook-index">B / NOTES</span><h3>A working notebook <span aria-hidden="true">↗</span></h3><p>Course notes, technical references, and useful things to return to.</p><span class="notebook-action">Browse the notebook <span aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+    <section class="contact" aria-labelledby="contact-heading"><div><span class="section-number">LET'S CONNECT</span><h2 id="contact-heading">Always open to a good research conversation.</h2></div><a href="mailto:tanyy2023@shanghaitech.edu.cn">tanyy2023@shanghaitech.edu.cn <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer page-shell"><p>© <span id="year">2026</span> Yiyang Tan <span class="footer-divider">/</span> 谭逸扬</p><div><a href="https://github.com/Tanngent2005">GitHub ↗</a><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>
